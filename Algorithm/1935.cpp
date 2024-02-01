@@ -3,10 +3,9 @@
 #include <unordered_map>
 using namespace std;
 
-
 int main()
 {
-	stack<char> postfix_notation;
+	stack<float> postfix_notation;
 	unordered_map<char, float> operand;
 
 	int n;
@@ -29,33 +28,41 @@ int main()
 	{
 		if (line[index] == 42) // °öÇÏ±â
 		{
-			int a = operand[postfix_notation.top()];
-			operand.erase(postfix_notation.top());
+			float a = postfix_notation.top();
 			postfix_notation.pop();
 
-			int b = operand[postfix_notation.top()];
-			operand[postfix_notation.top()] = float(b * a);
+			float b = postfix_notation.top();
+			postfix_notation.pop();
+			postfix_notation.push(float(b * a));
 		}
 		else if(line[index] == 47)
 		{
-			float a = operand[postfix_notation.top()];
-			operand.erase(postfix_notation.top());
+			float a = postfix_notation.top();
 			postfix_notation.pop();
 
-			float b = operand[postfix_notation.top()];
-			operand[postfix_notation.top()] = float(b / a);
+			float b = postfix_notation.top();
+			postfix_notation.pop();
+			postfix_notation.push(float(b / a));
+		}
+		else if (line[index] == 43) // +
+		{
+			postfix_notation.push(103);
+		}
+		else if (line[index] == 45)
+		{
+			postfix_notation.push(101);
 		}
 		else
 		{
-			postfix_notation.push(char(line[index]));
+			postfix_notation.push(char(operand[line[index]]));
 		}
 		index++;
 	}
 
-	stack<char> tempStack;
-	while (postfix_notation.size() != 1)
+	stack<float> tempStack;
+	while (!(postfix_notation.size() == 1 && tempStack.empty()))
 	{
-		if (postfix_notation.top() > 64)
+		if (postfix_notation.top() <= 100)
 		{
 			while (!tempStack.empty())
 			{
@@ -63,39 +70,41 @@ int main()
 				tempStack.pop();
 			}
 		}
-		else if (postfix_notation.top() == '+' || postfix_notation.top() == '-')
+		else if (postfix_notation.top() == 103 || postfix_notation.top() == 101)
 		{
-			int operator_ = int(postfix_notation.top() - 44) * -1;
+			int operator_ = int(postfix_notation.top() - 102);
 			postfix_notation.pop();
-			if (postfix_notation.top() > 64)
+			if (postfix_notation.top() <= 100)
 			{
-				char a = postfix_notation.top();
+				float a = postfix_notation.top();
 				postfix_notation.pop();
 
-				if (postfix_notation.top() > 64)
+				if (postfix_notation.top() <= 100)
 				{
-					float b = operand[postfix_notation.top()];
-					operand.erase(a);
-					operand[postfix_notation.top()] = float(b + (operator_ * operand[a]));
+					float b = postfix_notation.top();
+					postfix_notation.pop();
+					postfix_notation.push(float(b + (operator_ * a)));
 				}
 				else
 				{
-					if (operator_ == -1) tempStack.push('-');
-					else tempStack.push('+');
+					if (operator_ == -1) tempStack.push(101);
+					else tempStack.push(103);
 
 					tempStack.push(a);
 				}
 			}
 			else
 			{
-				if (operator_ == -1) tempStack.push('-');
-				else tempStack.push('+');
+				if (operator_ == -1) tempStack.push(101);
+				else tempStack.push(103);
 			}
 		}
 	}
 
 	if (postfix_notation.size() == 1)
 	{
-		cout << operand[postfix_notation.top()];
+		cout << fixed;
+		cout.precision(2);
+		cout << postfix_notation.top();
 	}
 }

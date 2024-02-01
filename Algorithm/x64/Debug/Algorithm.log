@@ -1,4 +1,2 @@
-﻿  1935.cpp
-C:\Users\Jeongmin\source\repos\Algorithm\Algorithm\1935.cpp(32,10): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Jeongmin\source\repos\Algorithm\Algorithm\1935.cpp(36,10): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  11655.cpp
   Algorithm.vcxproj -> C:\Users\Jeongmin\source\repos\Algorithm\x64\Debug\Algorithm.exe
