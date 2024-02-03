@@ -1,3 +1,6 @@
+#pragma once
+#define MAX_ITEMS 10000
+
 class FullStack {};
 class EmptyStack {};
 
