@@ -19,11 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DynamicAllocStackType.cpp" />
-    <ClCompile Include="DynamicAllocStackType.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="NodeType.h" />
+    <ClCompile Include="1929.cpp" />
+    <ClCompile Include="1978.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
