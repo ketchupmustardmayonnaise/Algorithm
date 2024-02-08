@@ -1,5 +1,7 @@
 #include "DynamicAllocStackType.h"
 #include <stdexcept>
+#include <iostream>
+using namespace std;
 
 template<class ItemType>
 StackType<ItemType>::StackType()
@@ -10,7 +12,7 @@ StackType<ItemType>::StackType()
 template<class ItemType>
 StackType<ItemType>::~StackType()
 {
-	NodeType* tempPtr;
+	NodeType<ItemType>* tempPtr;
 
 	while (topPtr != nullptr)
 	{
@@ -26,7 +28,7 @@ void StackType<ItemType>::Push(ItemType newItem)
 	if (IsFull())
 		throw FullStack();
 
-	NodeType* location;
+	NodeType<ItemType>* location;
 	location = new NodeType<ItemType>;
 	
 	location->info = newItem;
@@ -41,7 +43,7 @@ void StackType<ItemType>::Pop()
 		throw EmptyStack();
 	else
 	{
-		NodeType tempPtr;
+		NodeType<ItemType>* tempPtr;
 		tempPtr = topPtr;
 		topPtr = topPtr->next;
 		delete tempPtr;
@@ -51,7 +53,7 @@ void StackType<ItemType>::Pop()
 template<class ItemType>
 bool StackType<ItemType>::IsFull() const
 {
-	NodeType* location;
+	NodeType<ItemType>* location;
 	try
 	{
 		// 새로운 Node를 받는 것이 가능함 => false
@@ -82,4 +84,13 @@ ItemType StackType<ItemType>::Top()
 }
 
 int main()
-{}
+{
+	StackType<int> stack;
+	stack.Push(3);
+	stack.Push(5);
+
+	cout << stack.Top() << endl;
+	stack.Pop();
+	cout << stack.Top() << endl;
+	stack.Pop();
+}
