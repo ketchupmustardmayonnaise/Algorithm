@@ -18,7 +18,7 @@ int main()
 		int maxNum = 0;
 		for (int j = 0; j < i; j++)
 		{
-			if (numList[j] < temp && dp[j] > maxNum) maxNum = dp[j];
+			if (numList[j] > temp && dp[j] > maxNum) maxNum = dp[j];
 		}
 		dp[i] = maxNum + 1;
 	}
