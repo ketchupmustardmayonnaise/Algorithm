@@ -5,12 +5,18 @@ template<class ItemType>
 TreeType<ItemType>::TreeType()
 {
 	root = nullptr;
+	preQue = new QueType<ItemType>;
+	inQue = new QueType<ItemType>;
+	postQue = new QueType<ItemType>;
 }
 
 template<class ItemType>
 TreeType<ItemType>::~TreeType()
 {
 	MakeEmpty(root);
+	delete preQue;
+	delete inQue;
+	delete postQue;
 }
 
 template<class ItemType>
@@ -246,9 +252,7 @@ void FindNode(TreeNode<ItemType>* tree, ItemType item, TreeNode<ItemType>*& node
 int main()
 {
 	TreeType<int> tree;
-	tree.InsertItem(5);
-	tree.InsertItem(3);
-	tree.InsertItem(7);
-	tree.ResetTree(IN_ORDER);
-	tree.Print();
+	//tree.InsertItem(5);
+	//tree.InsertItem(3);
+	//tree.InsertItem(7);
 }

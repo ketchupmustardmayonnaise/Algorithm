@@ -19,12 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataStructure\BinarySearchTree.cpp" />
-    <ClCompile Include="DataStructure\QueType.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="DataStructure\BinarySearchTree.h" />
-    <ClInclude Include="DataStructure\QueType.h" />
+    <ClCompile Include="15988.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -1,5 +1,2 @@
-﻿  QueType.cpp
-BinarySearchTree.obj : error LNK2019: "public: __cdecl QueType<int>::QueType<int>(void)" (??0?$QueType@H@@QEAA@XZ)"public: __cdecl TreeType<int>::TreeType<int>(void)" (??0?$TreeType@H@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-BinarySearchTree.obj : error LNK2019: "public: __cdecl QueType<int>::~QueType<int>(void)" (??1?$QueType@H@@QEAA@XZ)"int `public: __cdecl TreeType<int>::TreeType<int>(void)'::`1'::dtor$0" (?dtor$0@?0???0?$TreeType@H@@QEAA@XZ@4HA) 함수에서 참조되는 확인할 수 없는 외부 기호
-BinarySearchTree.obj : error LNK2019: "public: void __cdecl QueType<int>::Enqueue(int)" (?Enqueue@?$QueType@H@@QEAAXH@Z)"void __cdecl InOrder<int>(struct TreeNode<int> *,class QueType<int> &)" (??$InOrder@H@@YAXPEAU?$TreeNode@H@@AEAV?$QueType@H@@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\Users\pinkm\Algorithm\x64\Debug\Algorithm.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.
+﻿  15988.cpp
+  Algorithm.vcxproj -> C:\Users\Jeongmin\source\repos\Algorithm\x64\Debug\Algorithm.exe

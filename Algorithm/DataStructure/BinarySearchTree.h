@@ -28,7 +28,7 @@ public:
 	void Print() const;
 private:
 	TreeNode<ItemType>* root;
-	QueType<ItemType> preQue;
-	QueType<ItemType> inQue;
-	QueType<ItemType> postQue;
+	QueType<ItemType>* preQue;
+	QueType<ItemType>* inQue;
+	QueType<ItemType>* postQue;
 };
