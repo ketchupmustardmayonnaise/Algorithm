@@ -1,6 +1,16 @@
 #include "QueType.h"
 
 template<class ItemType>
+QueType<ItemType>::QueType()
+{
+	int max = 10;
+	maxQue = max + 1;
+	front = maxQue - 1;
+	rear = maxQue - 1;
+	items = new ItemType[maxQue];
+}
+
+template<class ItemType>
 QueType<ItemType>::QueType(int max)
 {
 	maxQue = max + 1;
@@ -39,8 +49,4 @@ void QueType<ItemType>::Dequeue(ItemType& item)
 {
 	front = (front + 1) % maxQue;
 	item = items[front];
-}
-
-int main()
-{
 }

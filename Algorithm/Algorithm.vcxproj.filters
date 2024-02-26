@@ -18,8 +18,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1912.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="DataStructure\QueType.cpp">
+      <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
+    <ClCompile Include="DataStructure\BinarySearchTree.cpp">
+      <Filter>소스 파일\자료구조</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructure\QueType.h">
+      <Filter>소스 파일\자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\BinarySearchTree.h">
+      <Filter>소스 파일\자료구조</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

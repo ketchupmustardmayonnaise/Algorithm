@@ -1,0 +1,5 @@
+﻿  BinarySearchTree.cpp
+BinarySearchTree.obj : error LNK2019: "public: __thiscall QueType<int>::QueType<int>(void)" (??0?$QueType@H@@QAE@XZ)"public: __thiscall TreeType<int>::TreeType<int>(void)" (??0?$TreeType@H@@QAE@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+BinarySearchTree.obj : error LNK2019: "public: __thiscall QueType<int>::~QueType<int>(void)" (??1?$QueType@H@@QAE@XZ)__unwindfunclet$??0?$TreeType@H@@QAE@XZ$0 함수에서 참조되는 확인할 수 없는 외부 기호
+BinarySearchTree.obj : error LNK2019: "public: void __thiscall QueType<int>::Enqueue(int)" (?Enqueue@?$QueType@H@@QAEXH@Z)"void __cdecl InOrder<int>(struct TreeNode<int> *,class QueType<int> &)" (??$InOrder@H@@YAXPAU?$TreeNode@H@@AAV?$QueType@H@@@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\pinkm\Algorithm\Debug\Algorithm.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.

@@ -4,6 +4,7 @@ template<class ItemType>
 class QueType
 {
 public:
+	QueType();
 	QueType(int max);
 	~QueType();
 
