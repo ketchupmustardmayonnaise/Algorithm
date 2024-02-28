@@ -19,7 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="15988.cpp" />
+    <ClCompile Include="DataStructure\GraphType.cpp" />
+    <ClCompile Include="DataStructure\QueType.cpp" />
+    <ClCompile Include="DataStructure\StackType.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructure\GraphType.h" />
+    <ClInclude Include="DataStructure\QueType.h" />
+    <ClInclude Include="DataStructure\StackType.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
